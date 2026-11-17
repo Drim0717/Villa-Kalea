@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#a98f7c">
+    <title>Villa Kalea | Comparte tu casita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <a class="brand" href="#" aria-label="Kalea inicio">
+                <span class="brand-mark">k</span>
+                <span>Kalea</span>
+            </a>
+            <nav aria-label="Navegación principal">
+                <a href="#como-funciona">Cómo funciona</a>
+                <a href="#villa">Villa Kalea</a>
+            </nav>
+            <button class="share-button" id="share-button" aria-label="Compartir Villa Kalea">
+                <span>↗</span>
+                <span class="desktop-only">Compartir</span>
+            </button>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="spark">✦</span> Temporada navideña</p>
+                    <h1>Tu casita.<br><em>Tu historia.</em></h1>
+                    <p class="hero-text">Cada casita de jengibre tiene algo especial. Registra la tuya, cuéntanos cómo
+                        la hiciste y sé parte de <strong>Villa Kalea.</strong></p>
+                    <a class="button button-dark" href="#registro">Quiero compartir la mía <span>↓</span></a>
+                    <div class="hero-note">
+                        <div class="avatar-stack" aria-hidden="true"><span>J</span><span>M</span><span>A</span><span>+</span>
+                        </div>
+                        <span>Únete a más de 120 familias</span>
+                    </div>
+                </div>
+                <div class="hero-art" aria-label="Ilustración de una casita de jengibre">
+                    <div class="star star-one">✦</div>
+                    <div class="star star-two">✧</div>
+                    <div class="gingerbread-house">
+                        <div class="roof"><span></span><i></i><b></b></div>
+                        <div class="house-body">
+                            <div class="window window-left">✦</div>
+                            <div class="door"><span>•</span></div>
+                            <div class="window window-right">✦</div>
+                        </div>
+                        <div class="snow">〰 〰 〰 〰 〰</div>
+                    </div>
+                    <div class="art-caption"><span class="caption-line"></span> Hecho con amor, compartido con ilusión
+                    </div>
+                </div>
+            </section>
+
+            <section class="steps-section" id="como-funciona">
+                <div class="section-heading">
+                    <p class="eyebrow">Así de fácil</p>
+                    <h2>Construyamos esta villa<br><em>juntos.</em></h2>
+                </div>
+                <div class="steps">
+                    <article class="step"><span class="step-number">01</span><div class="step-icon">♧</div><h3>Regístrate</h3><p>Cuéntanos quién eres para darte la bienvenida a la villa.</p></article>
+                    <article class="step step-featured"><span class="step-number">02</span><div class="step-icon">☆</div><h3>Comparte tu casita</h3><p>Sube una foto, déjanos tu rating y cuéntanos tu experiencia.</p></article>
+                    <article class="step"><span class="step-number">03</span><div class="step-icon">♡</div><h3>Recibe tu regalo</h3><p>Te enviaremos un 10% de descuento para tu próxima compra.</p></article>
+                </div>
+            </section>
+
+            <section class="join-section" id="registro">
+                <div class="form-intro">
+                    <p class="eyebrow">Bienvenido a la villa</p>
+                    <h2>Tu rincón<br><em>empieza aquí.</em></h2>
+                    <p>Regístrate para compartir la magia de tu casita y recibir tu beneficio especial.</p>
+                    <div class="discount-pill"><span>10%</span><div><strong>Tu próxima compra</strong><small>Por compartir tu creación</small></div></div>
+                </div>
+                <form class="review-form" id="review-form">
+                    <div class="form-progress"><span>01</span><div><i></i></div><span>03</span></div>
+                    <label>¿Cómo te llamas?<input required type="text" name="name" placeholder="Tu nombre"></label>
+                    <label>Tu correo electrónico<input required type="email" name="email" placeholder="hola@ejemplo.com"></label>
+                    <div class="form-divider"></div>
+                    <fieldset>
+                        <legend>¿Cómo calificarías tu experiencia?</legend>
+                        <div class="rating" role="radiogroup" aria-label="Rating de 1 a 5 estrellas">
+                            <button type="button" class="star-button" data-rating="1" aria-label="1 estrella">★</button>
+                            <button type="button" class="star-button" data-rating="2" aria-label="2 estrellas">★</button>
+                            <button type="button" class="star-button" data-rating="3" aria-label="3 estrellas">★</button>
+                            <button type="button" class="star-button" data-rating="4" aria-label="4 estrellas">★</button>
+                            <button type="button" class="star-button" data-rating="5" aria-label="5 estrellas">★</button>
+                        </div>
+                        <input type="hidden" name="rating" id="rating" value="0">
+                    </fieldset>
+                    <label>Cuéntanos sobre tu casita<textarea required name="comment" rows="3" placeholder="¿Qué fue lo que más disfrutaste?"></textarea></label>
+                    <label class="upload-label" for="photo"><span class="upload-icon">⌁</span><span><strong id="file-name">Agrega una foto de tu casita</strong><small>JPG o PNG · máximo 10 MB</small></span><span class="upload-arrow">↑</span><input id="photo" type="file" accept="image/png,image/jpeg,image/webp"></label>
+                    <button class="button button-dark submit-button" type="submit">Entrar a Villa Kalea <span>→</span></button>
+                    <p class="privacy-note">Al registrarte aceptas recibir novedades de Kalea. No compartiremos tus datos.</p>
+                </form>
+            </section>
+
+            <section class="villa-section" id="villa">
+                <div class="villa-heading"><div><p class="eyebrow">La comunidad Kalea</p><h2>Conoce <em>Villa Kalea</em></h2></div><div class="overall-rating"><strong>4.9</strong><span>★★★★★<small>Basado en 126 casitas</small></span></div></div>
+                <div class="gallery">
+                    <article class="gallery-card card-tall"><div class="house-photo photo-one"><span class="photo-house">⌂</span></div><div class="card-info"><strong>La casita de María</strong><span>★★★★★</span></div></article>
+                    <article class="gallery-card"><div class="house-photo photo-two"><span class="photo-house">⌂</span></div><div class="card-info"><strong>Navidad en familia</strong><span>★★★★★</span></div></article>
+                    <article class="gallery-card"><div class="house-photo photo-three"><span class="photo-house">⌂</span></div><div class="card-info"><strong>El rincón de Ana</strong><span>★★★★<i>★</i></span></div></article>
+                </div>
+                <button class="button button-outline" id="load-more">Ver todas las casitas <span>→</span></button>
+            </section>
+        </main>
+
+        <footer><span class="brand-mark small">k</span><span>Hecho artesanalmente por Kalea</span><span class="footer-dot">·</span><a href="#">Instagram</a><a href="#">WhatsApp</a></footer>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
